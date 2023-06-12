@@ -1,0 +1,9 @@
+
+li {
+  list-style-type: none;
+}
+
+.products-conteiner {
+  display: grid;
+  grid-template-columns: repeat(autofit, min-max());
+}
