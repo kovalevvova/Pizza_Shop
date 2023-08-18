@@ -4,7 +4,7 @@ const CATALOG = [
     name: "Ветчина и сыр",
     disc: "Ветчина, моцарелла, соус",
     img: "/img/catalog/1.jpeg",
-    price: 350,
+    price: 12050,
   },
   {
     id: "el2",
