@@ -4,8 +4,20 @@ class LocalStorageUtil {
   }
 
   getProducts() {
-    const productsLocalStorage = localStorage.getItem(this.keyName)
+    const productsLocalStorage = localStorage.getItem(this.keyName);
+    if (productsLocalStorage !== null) {
+      return JSON.parse(productsLocalStorage);
+    }
+    return [];
   }
 
-  putProducts(id) {}
+  putProducts(id) {
+    let products = this.getProducts();
+    products.push(id);
+    localStorage.setItem(this.keyName, JSON.stringify(products));
+  }
 }
+
+const localStorageUtil = new LocalStorageUtil();
+
+
